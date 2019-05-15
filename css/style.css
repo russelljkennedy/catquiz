@@ -1,0 +1,32 @@
+body {
+  background: #2d2e30;
+  /* color: #0ba80b; */
+  color: #f119b8;
+  font-family: monospace, 'Arial', sans-serif;
+  margin-left: 30px;
+}
+[v-cloak] {
+  display: none;
+}
+ul {
+  margin-left: -30px;
+}
+li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+input {
+  margin-right: 20px;
+  width: 1px;
+}
+.message {
+  color: #590667;
+  background: #31b7f7;
+  max-width: 280px;
+  padding: 10px;
+}
+.results img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}

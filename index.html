@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cat Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Beginning of Vue app -->
+  <div id="feline" v-cloak>
+    <h1>{{ whiskers.title }}</h1>
+    <!-- Quiz container -->
+    <div class="gobolino">
+      <div v-for="(question, index) in whiskers.questions">
+        <div v-show="index === spotIndex">
+          <h2>{{question.catq}}</h2>
+          <ul>
+            <li v-for="option in question.options">
+              <label>
+                <input type="radio" v-bind:value="option.value" v-bind:name="index" v-model="paws[index]">{{ option.text }}
+              </label>
+            </li>
+          </ul>
+          <p v-if="message !== ''" class="message">{{ message }}</p>
+          <button class="back" v-if="spotIndex > 0" @click="slinkBack">Back</button>
+          <button class="fwd" v-if="spotIndex !== whiskers.questions.length-1" @click="jumpFwd">Fwd</button>
+          <button class="submit" v-if="spotIndex === whiskers.questions.length-1" @click="jumpFwd">Which cat am I?</button>
+        </div>
+      </div>
+      <!-- Only show the results at the end of the cat quiz -->
+      <div class="results" v-show="spotIndex === whiskers.questions.length">
+        <h2>Results</h2>
+        <div v-if="spotIndex === whiskers.questions.length">
+          {{ commonHousehold }}
+          <!-- Which cat are you? -->
+          <div class="kip" v-if="yourCat === 'kip'">
+            <h2>You are Kip!</h2>
+            <img src="img/kip.jpg" alt="">
+            <p>
+              You are a cool customer with a big personality who takes the world in their stride. Describing you as "relaxed" doesn't really do you justice - in fact, you are so chilled out you often fall right off of the furniture. I guess that's another point to make - you're not exactly the sharpest tool in the box, and can be fooled quite easily, but you make up for this by being extremely loveable. If there's a party going on, you're right there in the heart of the action, collecting everyone's affection and generally being the centre of attention. You've got plenty of confidence and are fully aware that everyone loves you. You're a bit like a cat celebrity really. Maybe one day they'll make a film all about you, but until then carry on being your bold and brilliant self. We'll keep on watching your every move.
+            </p>
+            <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I was Kip!" target="_blank" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+          </div>
+          <div class="peg" v-if="yourCat === 'peg'">
+            <h2>You are Peg!</h2>
+            <img src="img/peg.jpg" alt="">
+            <p>
+              You live in a state of perpetual fear, and are constantly looking over your shoulder for potential traps. You love to eat and enjoy nothing better than a good scratch. Unfortunately you take these pleasures to the extreme, and sometimes overeat, over-scratch and over-groom. If people are nearby, you are likely to hide from them as - let's face it - they're probably trying to trap you. However, once someone has your trust you are excellent company with a tuneful purr. Basically, you are awesome, but you don't know it - if only you had the self-awareness to realise that you are a totally terrific tortoiseshell. We love you, Peg!
+            </p>
+            <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I was Peg!" target="_blank" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of app -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
