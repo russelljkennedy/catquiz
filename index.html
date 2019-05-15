@@ -23,6 +23,7 @@
               </label>
             </li>
           </ul>
+          <!-- Show a message if no answer has been selected -->
           <p v-if="message !== ''" class="message">{{ message }}</p>
           <button class="back" v-if="spotIndex > 0" @click="slinkBack">Back</button>
           <button class="fwd" v-if="spotIndex !== whiskers.questions.length-1" @click="jumpFwd">Fwd</button>

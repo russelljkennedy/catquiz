@@ -94,149 +94,149 @@ window.onload = function() {
        ]
      },
 
-    //  {
-    //    catq: "If you weren't a cat you would be a...",
-    //
-    //      options: [{
-    //        text: "Rabbit",
-    //        value: "3"
-    //      },
-    //      {
-    //        text: "Dog",
-    //        value: "1"
-    //      },
-    //      {
-    //        text: "Squirrel monkey",
-    //        value: "2"
-    //      },
-    //      {
-    //        text: "Pig",
-    //        value: "4"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "Someone tries to buy you a present - how do you react?",
-    //
-    //      options: [{
-    //        text: "Of course. Everyone loves me. Why wouldn't they buy me a present?",
-    //        value: "2"
-    //      },
-    //      {
-    //        text: "It's a trap. This person is trying to lull me into a false sense of security before harming me",
-    //        value: "3"
-    //      },
-    //      {
-    //        text: "I love a gifty",
-    //        value: "1"
-    //      },
-    //      {
-    //        text: "I'll be running away now",
-    //        value: "4"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "Where do you prefer to sleep?",
-    //
-    //      options: [{
-    //        text: "In the middle of the bed",
-    //        value: "2"
-    //      },
-    //      {
-    //        text: "In a sunbeam",
-    //        value: "1"
-    //      },
-    //      {
-    //        text: "I sleep standing up",
-    //        value: "3"
-    //      },
-    //      {
-    //        text: "In the most uncomfortable and heavily camouflaged space I can find",
-    //        value: "4"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "A new piece of furniture arrives in your front room - what do you do?",
-    //
-    //      options: [{
-    //        text: "I investigate",
-    //        value: "2"
-    //      },
-    //      {
-    //        text: "I am cautious, but still a little curious",
-    //        value: "3"
-    //      },
-    //      {
-    //        text: "It could be a trap. I'll watch how this plays out from a safe distance",
-    //        value: "4"
-    //      },
-    //      {
-    //        text: "I try to spray it",
-    //        value: "1"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "How do you feel about loud noises?",
-    //
-    //      options: [{
-    //        text: "Loud noises are the worst! I'm out of here",
-    //        value: "1"
-    //      },
-    //      {
-    //        text: "Meh. I guess I don't like them, but I can cope",
-    //        value: "4"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "A stranger wants to be your friend. How easy will they find this?",
-    //
-    //      options: [{
-    //        text: "I give my love freely to anyone. I am a total feline floozy",
-    //        value: "1"
-    //      },
-    //      {
-    //        text: "You have to work hard for my love, but it's very rewarding once you have it",
-    //        value: "4"
-    //      },
-    //    ]
-    //  },
-    //
-    //  {
-    //    catq: "How are you most likely to react when you're being affectionate?",
-    //
-    //      options: [{
-    //        text: "I pad and make a pleasing noise",
-    //        value: "4"
-    //      },
-    //      {
-    //        text: "I dribble on myself",
-    //        value: "1"
-    //      },
-    //    ]
-    //  },
-    //
-    // {
-    //   catq: "What is your overall take on life?",
-    //
-    //     options: [{
-    //       text: "Life is a wild ride, but I take it all in my stride",
-    //       value: "1"
-    //     },
-    //     {
-    //       text: "Life is a series of potential traps and terrors. I just can't even handle it right now",
-    //       value: "4"
-    //     },
-    //   ]
-    // },
+     {
+       catq: "If you weren't a cat you would be a...",
+
+         options: [{
+           text: "Rabbit",
+           value: "3"
+         },
+         {
+           text: "Dog",
+           value: "1"
+         },
+         {
+           text: "Squirrel monkey",
+           value: "2"
+         },
+         {
+           text: "Pig",
+           value: "4"
+         },
+       ]
+     },
+
+     {
+       catq: "Someone tries to buy you a present - how do you react?",
+
+         options: [{
+           text: "Of course. Everyone loves me. Why wouldn't they buy me a present?",
+           value: "2"
+         },
+         {
+           text: "It's a trap. This person is trying to lull me into a false sense of security before harming me",
+           value: "3"
+         },
+         {
+           text: "I love a gifty",
+           value: "1"
+         },
+         {
+           text: "I'll be running away now",
+           value: "4"
+         },
+       ]
+     },
+
+     {
+       catq: "Where do you prefer to sleep?",
+
+         options: [{
+           text: "In the middle of the bed",
+           value: "2"
+         },
+         {
+           text: "In a sunbeam",
+           value: "1"
+         },
+         {
+           text: "I sleep standing up",
+           value: "3"
+         },
+         {
+           text: "In the most uncomfortable and heavily camouflaged space I can find",
+           value: "4"
+         },
+       ]
+     },
+
+     {
+       catq: "A new piece of furniture arrives in your front room - what do you do?",
+
+         options: [{
+           text: "I investigate",
+           value: "2"
+         },
+         {
+           text: "I am cautious, but still a little curious",
+           value: "3"
+         },
+         {
+           text: "It could be a trap. I'll watch how this plays out from a safe distance",
+           value: "4"
+         },
+         {
+           text: "I try to spray it",
+           value: "1"
+         },
+       ]
+     },
+
+     {
+       catq: "How do you feel about loud noises?",
+
+         options: [{
+           text: "Loud noises are the worst! I'm out of here",
+           value: "1"
+         },
+         {
+           text: "Meh. I guess I don't like them, but I can cope",
+           value: "4"
+         },
+       ]
+     },
+
+     {
+       catq: "A stranger wants to be your friend. How easy will they find this?",
+
+         options: [{
+           text: "I give my love freely to anyone. I am a total feline floozy",
+           value: "1"
+         },
+         {
+           text: "You have to work hard for my love, but it's very rewarding once you have it",
+           value: "4"
+         },
+       ]
+     },
+
+     {
+       catq: "How are you most likely to react when you're being affectionate?",
+
+         options: [{
+           text: "I pad and make a pleasing noise",
+           value: "4"
+         },
+         {
+           text: "I dribble on myself",
+           value: "1"
+         },
+       ]
+     },
+
+    {
+      catq: "What is your overall take on life?",
+
+        options: [{
+          text: "Life is a wild ride, but I take it all in my stride",
+          value: "1"
+        },
+        {
+          text: "Life is a series of potential traps and terrors. I just can't even handle it right now",
+          value: "4"
+        },
+      ]
+    },
    ]
   };
 
@@ -254,12 +254,10 @@ window.onload = function() {
       methods: {
         // Forward and back functions
         jumpFwd: function() {
-          // On click, the answers array should always be one ahead of the spotIndex
-          // If these values are ever the same, display a message.
+          // Has the question been answered?
           if(this.paws.length == this.spotIndex) {
             this.message = "Please choose an answer...";
           }
-          // If the values don't match, spin the quiz on to the next question.
           else {
             this.message = "";
             this.spotIndex++;
