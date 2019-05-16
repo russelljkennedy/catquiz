@@ -1,32 +1,138 @@
+html, body {
+  height: 100%;
+}
 body {
-  background: #2d2e30;
-  /* color: #0ba80b; */
-  color: #f119b8;
+  /* background: #2d2e30; */
+  background-image: url('../img/black-cats.png');
+  /* color: #f119b8; */
+  color: #261c23;
   font-family: monospace, 'Arial', sans-serif;
-  margin-left: 30px;
 }
 [v-cloak] {
   display: none;
 }
+h1 {
+  text-align: center;
+}
+.gobolino {
+  text-align: center;
+}
+.gobolino h2 {
+  margin: 0 3vw;
+}
 ul {
-  margin-left: -30px;
+  margin-left: 30px;
+  text-align: left;
 }
 li {
   margin-bottom: 10px;
   list-style-type: none;
 }
 input {
-  margin-right: 20px;
-  width: 1px;
+  margin: 0 10px 0 -40px;
+  text-align: center;
+  position: absolute;
+}
+label {
+  display: block;
+  margin-left: 8vw;
+  width: 30vw;
 }
 .message {
-  color: #590667;
-  background: #31b7f7;
-  max-width: 280px;
+  color: #070708;
+  background: #a44aec;
   padding: 10px;
+}
+.messages {
+  width: 100%;
+  display: inline-block;
+}
+.controls {
+  display: inline-block;
+}
+button {
+  padding: 5px;
+  margin: 0 2vw;
+  width: 8vw;
+  border-radius: 15px;
+  background: #fc478c;
+  border: #fc478c;
+  font-size: 13px;
+  font-family: monospace, 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+button:hover {
+  background: #f119b8;
+  border: #f119b8;
+}
+button.submit {
+  width: auto;
 }
 .results img {
   max-width: 400px;
   width: 100%;
   height: auto;
+}
+#feline {
+  background: #5677c4;
+  padding: 8vh 10px 20px 10px;
+  width: 55vw;
+  border-radius: 15px;
+  box-shadow: -2px 2px #3f3c41;
+  margin-bottom: 10px;
+}
+.peg, .kip {
+  margin: 0 2.5vw;
+}
+.peg p, .kip p {
+  text-align: justify;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+::-moz-selection { background: #D2ABAC; }
+::selection { background: #D2ABAC; }
+/* Media queries */
+@media only screen and (max-width:800px) {
+  #feline {
+    width: 75vw;
+    padding-top: 3vh;
+  }
+}
+@media only screen and (max-width:650px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  ul {
+    margin-left: 0;
+  }
+  label {
+    width: auto;
+  }
+  button {
+    width: 13vw;
+  }
+}
+@media only screen and (max-width:500px) {
+  ul {
+    margin-left: -20px;
+  }
+}
+@media only screen and (max-width:400px) {
+  #feline {
+    width: 85vw;
+  }
+  button {
+    width: 20vw;
+  }
+}
+@media only screen and (max-width:240px) {
+  button {
+    margin-bottom: 20px;
+  }
 }

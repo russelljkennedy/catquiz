@@ -265,6 +265,7 @@ window.onload = function() {
           }
         },
         slinkBack: function() {
+          this.message = "";
           this.spotIndex--;
         },
       },
