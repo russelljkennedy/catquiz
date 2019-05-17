@@ -4,8 +4,10 @@ window.onload = function() {
    // Array of quiz questions
    var catquiz = {
      title: "Which of my cats are you?",
+     intro: "Find out now with this genuine, bonafide personality calculator.",
 
-     questions: [{
+     questions: [
+       {
        catq: "What is your natural state?",
 
          options: [
@@ -244,7 +246,7 @@ window.onload = function() {
       el: '#feline',
       data: {
         whiskers: catquiz,
-        spotIndex: 0,
+        spotIndex: -1,
         paws: Array(),
         emptyPaw: '',
         message: '',
@@ -252,11 +254,15 @@ window.onload = function() {
         yourCat: ''
       },
       methods: {
+        // Only show the intro at the start of the quiz, when the spotIndex is set to -1
+        startQuiz: function() {
+          this.spotIndex++;
+        },
         // Forward and back functions
         jumpFwd: function() {
           // Has the question been answered?
           if(this.paws.length == this.spotIndex) {
-            this.message = "Please choose an answer...";
+            this.message = "I can hazz answer?...";
           }
           else {
             this.message = "";

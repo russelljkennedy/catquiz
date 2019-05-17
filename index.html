@@ -4,36 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cat Quiz</title>
+  <title>Which of my cats are you?</title>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="grid">
+  <div class="cat-main">
     <!-- Beginning of Vue app -->
     <div id="feline" v-cloak>
       <h1>{{ whiskers.title }}</h1>
       <!-- Quiz container -->
       <div class="gobolino">
-        <div v-for="(question, index) in whiskers.questions">
-          <div v-show="index === spotIndex">
-            <h2>{{question.catq}}</h2>
-              <ul>
-                <li v-for="option in question.options">
-                  <label>
-                    <input type="radio" v-bind:value="option.value" v-bind:name="index" v-model="paws[index]">
-                    {{ option.text }}
-                  </label>
-                </li>
-              </ul>
-            <!-- Show a message if no answer has been selected -->
-            <div class="messages">
-              <p v-if="message !== ''" class="message">{{ message }}</p>
-            </div>
-            <div class="controls">
-              <button class="back" v-if="spotIndex > 0" @click="slinkBack">Back</button>
-              <button class="fwd" v-if="spotIndex !== whiskers.questions.length-1" @click="jumpFwd">Fwd</button>
-              <button class="submit" v-if="spotIndex === whiskers.questions.length-1" @click="jumpFwd">Which cat am I?</button>
+        <div v-if="spotIndex < 0" class="cat-intro">
+          <h2><em>{{ whiskers.intro }}</em></h2>
+          <p>Ever wondered if you're more Peg than Kip? Science has finally found a way to help you out. Answer the following questions honestly and discover which feline you most resemble.</p>
+          <p>Don't delay - find out today.</p>
+          <p><button class="start" @click="startQuiz">Start the quizzz, human</button></p>
+        </div>
+        <div v-else>
+          <div v-for="(question, index) in whiskers.questions">
+            <div v-show="index === spotIndex">
+              <h2>{{question.catq}}</h2>
+                <ul>
+                  <li v-for="option in question.options">
+                    <label>
+                      <input type="radio" v-bind:value="option.value" v-bind:name="index" v-model="paws[index]">
+                      {{ option.text }}
+                    </label>
+                  </li>
+                </ul>
+              <!-- Show a message if no answer has been selected -->
+              <div class="messages">
+                <p v-if="message !== ''" class="message">{{ message }}</p>
+              </div>
+              <div class="controls">
+                <button class="back" v-if="spotIndex > 0" @click="slinkBack"><< Back</button>
+                <button class="fwd" v-if="spotIndex !== whiskers.questions.length-1" @click="jumpFwd">Fwd >></button>
+                <button class="submit" v-if="spotIndex === whiskers.questions.length-1" @click="jumpFwd">Which cat am I?</button>
+              </div>
             </div>
           </div>
         </div>
@@ -52,7 +61,17 @@
               <p>
                 If there's a party going on, you're right there in the heart of the action, collecting everyone's affection and generally being the centre of attention. You've got plenty of confidence and are fully aware that everyone loves you. You're a bit like a cat celebrity really. Maybe one day they'll make a film all about you, but until then carry on being your bold and brilliant self. We'll keep on watching your every move.
               </p>
-              <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I was Kip!" target="_blank" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+              <div class="share-links">
+                <h3>Let the world know:</h3>
+                <ul>
+                  <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I was Kip!" target="_blank" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=%23">Facebook</a></li>
+                  <li><a href="https://pinterest.com/pin/create/button/?url=%23&media=Which%20of%20my%20cats%20are%20you?&description=I%20was%20Peg!">Pinterest</a></li>
+                </ul>
+              </div>
+              <div class="reset">
+              <p><button class="reload" onclick="location.reload()">Start again</button></p>
+              </div>
             </div>
             <div class="peg" v-if="yourCat === 'peg'">
               <h2>You are Peg!</h2>
@@ -63,6 +82,7 @@
               <p>
                 If people are nearby, you are likely to hide from them as - let's face it - they're probably trying to trap you. However, once someone has your trust you are excellent company with a tuneful purr. Basically, you are awesome, but you don't know it - if only you had the self-awareness to realise that you are a totally terrific tortoiseshell. We love you, Peg!
               </p>
+              <button class="reload" onclick="location.reload()">Start again</button>
               <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I was Peg!" target="_blank" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
             </div>
           </div>
